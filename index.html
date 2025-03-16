@@ -46,10 +46,56 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
 
+      /* Hero Section */
       .hero-section {
-        background-color: #495057;
+        background-image: url("assets/banner.jpg"); /* Add your banner image here */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: grayscale(30%); /* Grayscale effect */
         color: #fff;
-        padding: 100px 0;
+        padding: 150px 0;
+        height: 100vh; /* Full viewport height */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+      }
+
+      .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+      }
+
+      .hero-section .container {
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-section h1 {
+        font-size: 3.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .hero-section p {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .hero-section .btn {
+        font-size: 1.2rem;
+        padding: 10px 30px;
+        border-radius: 25px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
       }
 
       .card {
@@ -173,9 +219,9 @@
                   <li class="list-inline-item">
                     <i class="fas fa-phone"></i>
                     <a
-                      href="tel:+911234567890"
+                      href="tel:+919608650463"
                       class="text-white text-decoration-none"
-                      >+91 1234567890</a
+                      >+91 9608650463</a
                     >
                   </li>
                   <li class="list-inline-item">
@@ -225,11 +271,12 @@
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
           <a class="navbar-brand" href="index.html">
-            <img
+            <!-- <img
               src="https://via.placeholder.com/150x50?text=JobPinnacle+Logo"
               alt="JobPinnacle Tech Solutions Logo"
               class="img-fluid"
-            />
+            /> -->
+            JobPinnacle Tech Solutions
           </a>
           <button
             class="navbar-toggler"
@@ -297,7 +344,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-section text-center py-5">
+    <section class="hero-section">
       <div class="container">
         <h1 class="display-4 animate__animated animate__fadeInDown">
           Welcome to JobPinnacle Tech Solutions
@@ -332,7 +379,7 @@
           </div>
           <div class="col-md-4">
             <img
-              src="https://fastly.picsum.photos/id/250/536/354.jpg?hmac=qb3khzryKWU1ECPob2_1mYZLumW5eJTLSmhJzi1VVSI"
+              src="assets\training.jpg"
               alt="About JobPinnacle Tech Solutions"
               class="img-fluid rounded"
               style="width: 100%; height: 250px; object-fit: cover;"
@@ -350,10 +397,10 @@
           <div class="col-md-4">
             <div class="card mb-4">
               <img
-                src="https://fastly.picsum.photos/id/250/536/354.jpg?hmac=qb3khzryKWU1ECPob2_1mYZLumW5eJTLSmhJzi1VVSI"
+                src="assets\python.jpeg"
                 class="card-img-top"
                 alt="Python Training"
-                style="width: 100%; height: 200px; object-fit: cover;"
+                style="width: 100%; height: 200px; object-fit: fill;"
               />
               <div class="card-body">
                 <h5 class="card-title">Python Programming</h5>
@@ -370,10 +417,10 @@
           <div class="col-md-4">
             <div class="card mb-4">
               <img
-                src="https://fastly.picsum.photos/id/250/536/354.jpg?hmac=qb3khzryKWU1ECPob2_1mYZLumW5eJTLSmhJzi1VVSI"
+                src="assets\java.jpeg"
                 class="card-img-top"
                 alt="Java Training"
-                style="width: 100%; height: 200px; object-fit: cover;"
+                style="width: 100%; height: 200px; object-fit: fill;"
               />
               <div class="card-body">
                 <h5 class="card-title">Java Programming</h5>
@@ -389,10 +436,10 @@
           <div class="col-md-4">
             <div class="card mb-4">
               <img
-                src="https://fastly.picsum.photos/id/250/536/354.jpg?hmac=qb3khzryKWU1ECPob2_1mYZLumW5eJTLSmhJzi1VVSI"
+                src="assets\c.jpeg"
                 class="card-img-top"
-                alt="Java Training"
-                style="width: 100%; height: 200px; object-fit: cover;"
+                alt="C/C++ Training"
+                style="width: 100%; height: 200px; object-fit: fill;"
               />
               <div class="card-body">
                 <h5 class="card-title">C/C++ Programming</h5>
@@ -408,10 +455,29 @@
           <div class="col-md-4">
             <div class="card mb-4">
               <img
-                src="https://fastly.picsum.photos/id/250/536/354.jpg?hmac=qb3khzryKWU1ECPob2_1mYZLumW5eJTLSmhJzi1VVSI"
+                src="assets\sql.webp"
                 class="card-img-top"
                 alt="Web Development"
-                style="width: 100%; height: 200px; object-fit: cover;"
+                style="width: 100%; height: 200px; object-fit:contain;"
+              />
+              <div class="card-body">
+                <h5 class="card-title">SQL Training</h5>
+                <p class="card-text">
+                  Learn and understand database query using SQL.
+                </p>
+                <a href="sql.html" class="btn btn-primary"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <img
+                src="assets\webd.webp"
+                class="card-img-top"
+                alt="Web Development"
+                style="width: 100%; height: 200px; object-fit:contain;"
               />
               <div class="card-body">
                 <h5 class="card-title">Web Development</h5>
@@ -496,39 +562,42 @@
                 <div class="col-md-4">
                   <div class="student-card">
                     <img
-                      src="https://fastly.picsum.photos/id/250/536/354.jpg?hmac=qb3khzryKWU1ECPob2_1mYZLumW5eJTLSmhJzi1VVSI"
+                      src="assets\Vuppala.jpeg"
                       alt="Placement 1"
                       class="placement-img"
                     />
                     <div class="placement-info mt-3">
-                      <h5>John Doe</h5>
-                      <p>Placed at Infosys</p>
+                      <h5>Vuppala Shreya</h5>
+                      <p>Placed at Infor</p>
+                      <p>Package: 7 LPA</p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="student-card">
                     <img
-                      src="https://fastly.picsum.photos/id/250/536/354.jpg?hmac=qb3khzryKWU1ECPob2_1mYZLumW5eJTLSmhJzi1VVSI"
+                      src="assets\amit.jpeg"
                       alt="Placement 2"
                       class="placement-img"
                     />
                     <div class="placement-info mt-3">
-                      <h5>Jane Smith</h5>
-                      <p>Placed at TCS</p>
+                      <h5>Amit Killedar</h5>
+                      <p>Placed at IBM</p>
+                      <p>Package: 4.75 LPA</p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="student-card">
                     <img
-                      src="https://fastly.picsum.photos/id/250/536/354.jpg?hmac=qb3khzryKWU1ECPob2_1mYZLumW5eJTLSmhJzi1VVSI"
+                      src="assets\sonali.jpeg"
                       alt="Placement 3"
                       class="placement-img"
                     />
                     <div class="placement-info mt-3">
-                      <h5>Alice Johnson</h5>
-                      <p>Placed at Wipro</p>
+                      <h5>Sonali Patil</h5>
+                      <p>Placed at Capgemini</p>
+                      <p>Package: 4.25 LPA</p>
                     </div>
                   </div>
                 </div>
@@ -539,44 +608,79 @@
                 <div class="col-md-4">
                   <div class="student-card">
                     <img
-                      src="https://fastly.picsum.photos/id/250/536/354.jpg?hmac=qb3khzryKWU1ECPob2_1mYZLumW5eJTLSmhJzi1VVSI"
+                      src="assets\pinjari.jpeg"
                       alt="Placement 4"
                       class="placement-img"
                     />
                     <div class="placement-info mt-3">
-                      <h5>Bob Williams</h5>
-                      <p>Placed at Accenture</p>
+                      <h5>Pinjari Jameela</h5>
+                      <p>Placed at Capgemini</p>
+                      <p>Package: 4.25 LPA</p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="student-card">
                     <img
-                      src="https://fastly.picsum.photos/id/250/536/354.jpg?hmac=qb3khzryKWU1ECPob2_1mYZLumW5eJTLSmhJzi1VVSI"
+                      src="assets\leela.jpeg"
                       alt="Placement 5"
                       class="placement-img"
                     />
                     <div class="placement-info mt-3">
-                      <h5>Eva Brown</h5>
-                      <p>Placed at Capgemini</p>
+                      <h5>Leela</h5>
+                      <p>Placed at Tech Mahindra</p>
+                      <p>Package: 3.25 LPA</p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4">
                     <div class="student-card">
                       <img
-                        src="naveen.jpg"
+                        src="assets\abhishek.jpeg"
                         alt="Placement 5"
                         class="placement-img"
                       />
                       <div class="placement-info mt-3">
-                        <h5>Naveen Jain</h5>
-                        <p>Placed at InfoSyS</p>
+                        <h5>Abhishek Kalpavrushka</h5>
+                        <p>Placed at Accenture</p>
+                        <p>Package: 4.65 LPA</p>
                       </div>
                     </div>
                   </div>
               </div>
             </div>
+            <div class="carousel-item">
+                <div class="row justify-content-center">
+                  <div class="col-md-4">
+                    <div class="student-card">
+                      <img
+                        src="assets\darshinigb.jpeg"
+                        alt="Placement 4"
+                        class="placement-img"
+                      />
+                      <div class="placement-info mt-3">
+                        <h5>Darshini GB</h5>
+                        <p>Placed at Capgemini</p>
+                        <p>Package: 4.25 LPA</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="student-card">
+                      <img
+                        src="assets\Pakalapati.jpeg"
+                        alt="Placement 1"
+                        class="placement-img"
+                      />
+                      <div class="placement-info mt-3">
+                        <h5>Pakalapati Sai Kanaka Nandini</h5>
+                        <p>Placed at Capgemini</p>
+                        <p>Package: 4.25 LPA</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#placementCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -640,9 +744,11 @@
           <div class="col-md-4">
             <h5>Contact Us</h5>
             <ul class="list-unstyled">
-              <li><i class="fas fa-phone"></i> +91 1234567890</li>
+              <li><i class="fas fa-phone"></i> +91 9608650463</li>
+              <li><i class="fas fa-phone"></i> +91 6299614413</li>
+              <li><i class="fas fa-admin"></i>Rishu Raj</li>
               <li><i class="fas fa-envelope"></i> info@jobpinnacle.com</li>
-              <li><i class="fas fa-map-marker-alt"></i> Bangalore, India</li>
+              <li><i class="fas fa-map-marker-alt"></i>India</li>
             </ul>
           </div>
         </div>
